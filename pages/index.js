@@ -39,7 +39,7 @@ export default function Home() {
       </Head>
 
       {/* Header */}
-      <header className="flex justify-between p-5 w-full text-gray-00 space-x-4">
+      <header className="flex justify-center sm:justify-between p-5 w-full text-sm sm:text-base text-gray-00 space-x-4">
         {/* Left */}
         <div className="flex space-x-4 items-center">
           <p className="link">About</p>
@@ -59,11 +59,11 @@ export default function Home() {
       </header>
 
       {/* Body */}
-      <form className="flex flex-col items-center mt-14 sm:mt-44 flex-grow ml-5 mr-5 w-4/5 min-h-[54%]">
+      <form className="flex flex-col items-center mt-6 sm:mt-44 flex-grow ml-5 mr-5 w-4/5 min-h-[54%]">
         <Image
           src={logo}
-          height={130}
-          width={400}
+          height={120}
+          width={370}
           alt=""
         />
 
@@ -81,7 +81,7 @@ export default function Home() {
           <MicrophoneIcon className="h-5 text-gray-500 ml-5 hover:text-black cursor-pointer" />
         </div>
 
-        <div className="flex mt-4 sm:mt-8 flex-col w-[40%] sm:w-1/2 space-y-2 justify-center sm:space-y-0 sm:flex-row sm:space-x-4">
+        <div className="flex mt-4 sm:mt-8 flex-col w-[45%] sm:w-1/2 space-y-2 justify-center sm:space-y-0 sm:flex-row sm:space-x-4">
           <button
             className="btn"
             onClick={search}

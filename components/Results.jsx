@@ -10,7 +10,7 @@ function Results({ searchResults }) {
             {searchResults.items?.map(result => (
                 <div key={result.link} className="max-w-xl mb-8">
                     <div className="group">
-                        <a className="text-xs sm:text-sm" href={result.link}>{result.formattedUrl}</a>
+                        <a className="hidden sm:inline-flex sm:text-sm" href={result.link}>{result.formattedUrl}</a>
                         <a className="text-clip text-lg sm:text-xl text-blue-800 font-medium group-hover:underline" 
                             href={result.link}>
                                 <h2>{result.title}</h2>

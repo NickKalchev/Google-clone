@@ -7,9 +7,9 @@ import logo from '../assets/google.png'
 import Avatar from './Avatar';
 import HeaderOptions from './HeaderOptions';
 
-function Header({ searchTerm }) {
+function Header() {
     const router = useRouter();
-    const searchInputRef = useRef(searchTerm);
+    const searchInputRef = useRef(null);
 
     const search = (e) => {
         e.preventDefault();
@@ -22,6 +22,7 @@ function Header({ searchTerm }) {
     
         router.push(`/search?term=${term}`);
       };
+
 
     return (
         <header className="sticky top-0 bg-white">
@@ -45,8 +46,8 @@ function Header({ searchTerm }) {
                         defaultValue={router.query.term}
                     />
                     <XIcon className="h-5 sm:h-7 sm:mr-3 text-gray-500 cursor-pointer 
-                        transition duration-100 transform hover:scale-125" 
-                        onClick={() => (searchInputRef.current.value = "")} 
+                    transition duration-100 transform hover:scale-125" 
+                    onClick={() => (searchInputRef.current.value = "")} 
                     />
                     <MicrophoneIcon className="h-6 mr-3 hidden sm:inline-flex 
                         text-blue-500 border-l-2 pl-4 border-gray-300 cursor-pointer" 
