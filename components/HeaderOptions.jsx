@@ -3,7 +3,7 @@ import Option from "./Option"
 
 function HeaderOptions() {
     return (
-        <div className="flex  w-full text-gray-700 justify-evenly text-sm 
+        <div className="flex w-full text-gray-700 justify-evenly text-sm 
             lg:text-base lg:justify-start lg:space-x-36 lg:pl-52 border-b">
             <div className="flex space-x-6">
                 <Option Icon={SearchIcon} title="All" selected />
@@ -14,7 +14,7 @@ function HeaderOptions() {
                 <Option Icon={DotsVerticalIcon} title="More" />
             </div>
 
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 hidden sm:inline-flex">
                 <p className="link">Settings</p>
                 <p className="link">Tools</p>
             </div>

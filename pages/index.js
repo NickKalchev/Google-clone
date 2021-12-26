@@ -54,12 +54,12 @@ export default function Home() {
           <ViewGridIcon className="h-10 w-10 p-2 rounded-full hover:bg-gray-100 cursor-pointer" />
 
           {/* Avatar */}
-          <Avatar url="https://media-exp1.licdn.com/dms/image/C5603AQGrjA0HbL0VYA/profile-displayphoto-shrink_400_400/0/1589376925679?e=1645056000&v=beta&t=mL9v6_YbzL-gVLGNIR0pN0SXP6D_oW0OrHjcHeXBPZQ" />
+          <Avatar url="https://play-lh.googleusercontent.com/-HzCICEYiwho/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucl3rIZsqtACWtO8n-93VHA2oBRIMw/photo.jpg" />
         </div>
       </header>
 
       {/* Body */}
-      <form className="flex flex-col items-center mt-44 flex-grow ml-5 mr-5 w-4/5">
+      <form className="flex flex-col items-center mt-14 sm:mt-44 flex-grow ml-5 mr-5 w-4/5 min-h-[54%]">
         <Image
           src={logo}
           height={130}
@@ -81,10 +81,20 @@ export default function Home() {
           <MicrophoneIcon className="h-5 text-gray-500 ml-5 hover:text-black cursor-pointer" />
         </div>
 
-        <div className="flex mt-8 flex-col w-1/2 space-y-2 justify-center sm:space-y-0 sm:flex-row sm:space-x-4">
-          <button className="btn" onClick={search}>Google Search</button>
+        <div className="flex mt-4 sm:mt-8 flex-col w-[40%] sm:w-1/2 space-y-2 justify-center sm:space-y-0 sm:flex-row sm:space-x-4">
+          <button
+            className="btn"
+            onClick={search}
+          >
+            Google Search
+          </button>
 
-          <button className="btn" onClick={search}>I&apos;m Feeling Lucky</button>
+          <button
+            className="btn"
+            onClick={search}
+          >
+            I&apos;m Feeling Lucky
+          </button>
         </div>
       </form>
 

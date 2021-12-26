@@ -25,18 +25,18 @@ function Header({ searchTerm }) {
 
     return (
         <header className="sticky top-0 bg-white">
-            <div className="flex w-full p-6 items-center">
+            <div className="flex w-full p-3 sm:p-6 items-center mb-5 sm:mb-0">
                 <Image 
                     className="cursor-pointer" 
                     src={logo} 
                     alt="" 
-                    height={50}
+                    height={48}
                     width={140}
                     onClick={() => router.push('/')}
                 />
 
                 <form className="flex flex-grow border border-gray-200 rounded-full shadow-lg 
-                    max-w-3xl items-center px-4 sm:px-6 py-2 sm:py-3 ml-10 mr-5"
+                    max-w-3xl items-center px-4 sm:px-6 py-2 sm:py-3 ml-4 sm:ml-10 mr-5"
                 >
                     <input 
                         className="flex-grow w-full focus:outline-none" 
@@ -60,7 +60,7 @@ function Header({ searchTerm }) {
                 </form>
                 <Avatar 
                     className="ml-auto"
-                    url="https://media-exp1.licdn.com/dms/image/C5603AQGrjA0HbL0VYA/profile-displayphoto-shrink_400_400/0/1589376925679?e=1645056000&v=beta&t=mL9v6_YbzL-gVLGNIR0pN0SXP6D_oW0OrHjcHeXBPZQ" 
+                    url="https://play-lh.googleusercontent.com/-HzCICEYiwho/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucl3rIZsqtACWtO8n-93VHA2oBRIMw/photo.jpg" 
                 />
             </div>
 
