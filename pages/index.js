@@ -7,10 +7,28 @@ import {
 import { SearchIcon } from "@heroicons/react/outline";
 import Image from "next/image";
 import logo from "../assets/google.png";
+import Footer from "../components/Footer";
+import { useRef } from "react";
+import { useRouter } from "next/router";
 
 export default function Home() {
+  const router = useRouter();
+  const searchInputRef = useRef(null);
+
+  const search = (e) => {
+    e.preventDefault();
+
+    const term = searchInputRef.current.value;
+
+    if (!term) {
+      return;
+    }
+
+    router.push(`/search?term=${term}`);
+  };
+
   return (
-    <div>
+    <div className="flex flex-col items-center justify-center h-screen">
       <Head>
         <title>Google</title>
         <meta
@@ -21,7 +39,7 @@ export default function Home() {
       </Head>
 
       {/* Header */}
-      <header className="flex justify-between p-5 w-full text-gray-00">
+      <header className="flex justify-between p-5 w-full text-gray-00 space-x-4">
         {/* Left */}
         <div className="flex space-x-4 items-center">
           <p className="link">About</p>
@@ -41,11 +59,11 @@ export default function Home() {
       </header>
 
       {/* Body */}
-      <form className="flex flex-col items-center mt-44 flex-grow">
+      <form className="flex flex-col items-center mt-44 flex-grow ml-5 mr-5 w-4/5">
         <Image
           src={logo}
           height={130}
-          width={420}
+          width={400}
           alt=""
         />
 
@@ -57,13 +75,21 @@ export default function Home() {
           <input
             className="focus:outline-none flex-grow"
             type="text"
+            ref={searchInputRef}
           />
 
-          <MicrophoneIcon className="h-5 text-gray-500" />
+          <MicrophoneIcon className="h-5 text-gray-500 ml-5 hover:text-black cursor-pointer" />
+        </div>
+
+        <div className="flex mt-8 flex-col w-1/2 space-y-2 justify-center sm:space-y-0 sm:flex-row sm:space-x-4">
+          <button className="btn" onClick={search}>Google Search</button>
+
+          <button className="btn" onClick={search}>I&apos;m Feeling Lucky</button>
         </div>
       </form>
 
       {/* Footer */}
+      <Footer />
     </div>
   );
 }
