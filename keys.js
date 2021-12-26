@@ -1,3 +1,3 @@
-export const API_KEY = "AIzaSyBcqBtHw5fToAEYlHeWTMP58M8kNa8qwcM";
+export const API_KEY = process.env.GOOGLE_KEY;
 
-export const CONTEXT_KEY = "7974fa89396fe727d";
+export const CONTEXT_KEY = process.env.CONTEXT_KEY;

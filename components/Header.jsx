@@ -7,9 +7,9 @@ import logo from '../assets/google.png'
 import Avatar from './Avatar';
 import HeaderOptions from './HeaderOptions';
 
-function Header() {
+function Header({ searchTerm }) {
     const router = useRouter();
-    const searchInputRef = useRef(null);
+    const searchInputRef = useRef(searchTerm);
 
     const search = (e) => {
         e.preventDefault();
