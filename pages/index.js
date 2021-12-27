@@ -42,14 +42,14 @@ export default function Home() {
       <header className="flex justify-center sm:justify-between p-5 w-full text-sm sm:text-base text-gray-00 space-x-4">
         {/* Left */}
         <div className="flex space-x-4 items-center">
-          <p className="link">About</p>
-          <p className="link">Store</p>
+          <a href="https://nick-kalchev.web.app/" className="link">About</a>
+          <a href="https://nick-kalchev.web.app/" className="link">Store</a>
         </div>
 
         {/* Right */}
         <div className="flex space-x-4 items-center">
-          <p className="link">Gmail</p>
-          <p className="link">Images</p>
+          <a href="https://www.google.com/intl/en/gmail/about/" className="link">Gmail</a>
+          <a href="https://www.google.com/imghp" className="link">Images</a>
 
           <ViewGridIcon className="h-10 w-10 p-2 rounded-full hover:bg-gray-100 cursor-pointer" />
 
