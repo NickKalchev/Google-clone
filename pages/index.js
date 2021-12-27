@@ -65,6 +65,7 @@ export default function Home() {
           height={120}
           width={370}
           alt=""
+          objectFit="contain"
         />
 
         <div
